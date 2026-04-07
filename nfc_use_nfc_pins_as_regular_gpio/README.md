@@ -29,7 +29,7 @@ If the overlay approach doesn't work in your setup (e.g. bare-metal SDK), you ca
 
     SYS_INIT(disable_nfc_pins_early, PRE_KERNEL_1, 0);
 
-> __Important Notes:__ 
-> - When <code>PADCONFIG.ENABLE</code> is set to Disabled, the NFC protection circuit is also disabled, so the chip will __not__ be protected against strong NFC fields if an NFC antenna is connected.
-> - The NFC pins have __higher pin capacitance__ and some __leakage current__ between them when used as GPIOs and driven to different logical values. To save power, set both pins to the same logical value before entering power-saving modes.
-> - If using the nRF54L15 DK hardware, you also need to move the 0 Ω resistors from R21/R22 to R33/R34.
+## __Important Notes__ 
+ - When <code>PADCONFIG.ENABLE</code> is set to Disabled, the NFC protection circuit is also disabled, so the chip will __not__ be protected against strong NFC fields if an NFC antenna is connected.
+ - The NFC pins have __higher pin capacitance__ and some __leakage current__ between them when used as GPIOs and driven to different logical values. To save power, set both pins to the same logical value before entering power-saving modes.
+ - If using the nRF54L15 DK hardware, you also need to move the 0 Ω resistors from R21/R22 to R33/R34.
