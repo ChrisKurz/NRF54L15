@@ -15,7 +15,8 @@ In your board overlay file (.overlay), add:
 ### How it works:
 Setting <code>nfct-pins-as-gpios</code> in the <code>uicr</code> node causes the CMake build system to define <code>NRF_CONFIG_NFCT_PINS_AS_GPIOS</code>, which in turn causes <code>SystemInit()</code> to disable the NFC pad configuration by writing to the <code>PADCONFIG</code> register:
 
-    NRF_NFCT_S->PADCONFIG = (NFCT_PADCONFIG_ENABLE_Disabled << NFCT_PADCONFIG_ENABLE_Pos);
+  ![image](images/how_it_works.jpg)
+
 
 ## Alternative: Manual approach in code
 If the overlay approach doesn't work in your setup (e.g. bare-metal SDK), you can disable the NFC pads manually early in your application:
