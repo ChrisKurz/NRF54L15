@@ -1,5 +1,5 @@
 # nRF54L15
-A collection of sample projects for the nRF54L15 can be found here.
+This repository contains several code snippets that demonstrate how to configure or use the features of the nRF54L15.
 
 ## Clock
 - [32kHz and high-speed clock on pin](clock_testpin/README.md)
